@@ -36,6 +36,18 @@ npm run test:e2e
 npm run lint
 ```
 
+### Prettier files
+
+```
+npm run pretty
+```
+
+### Commit project
+
+```
+npm run commit
+```
+
 ### Customize configuration
 
 See [Configuration Reference](https://cli.vuejs.org/config/).

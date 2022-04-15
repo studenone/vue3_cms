@@ -4,7 +4,7 @@ import router from './router'
 import store from './store'
 
 createApp(App).use(store).use(router).mount('#app')
-function add(x: number) {
+function add(x: unknown) {
   return x
 }
-add(10)
+add({ name: 18 })
