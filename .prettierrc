@@ -4,5 +4,13 @@
   "printWidth": 80,
   "singleQuote": true,
   "trailingComma": "es5",
-  "semi": false
+  "semi": false,
+  "overrides": [
+    {
+      "files": "**/*.less",
+      "options": {
+        "semi": true
+      }
+    }
+  ]
 }

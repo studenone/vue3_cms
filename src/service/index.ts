@@ -15,7 +15,6 @@ const mcRequest = new MCRequest({
     },
     requestInterceptorCatch: (error) => error,
     responseInterceptor: (res) => {
-      console.log('[实例拦截器]')
       return res
     },
     responseInterceptorCatch: (error) => error,
