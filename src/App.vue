@@ -1,16 +1,12 @@
 <template>
   <div class="app">
-    <login></login>
+    <router-view></router-view>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue'
-import login from './views/login/login.vue'
-export default defineComponent({
-  components: {
-    login,
-  },
-})
+
+export default defineComponent({})
 </script>
 
 <style lang="less">

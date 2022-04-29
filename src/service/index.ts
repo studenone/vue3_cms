@@ -1,13 +1,14 @@
 import MCRequest from './request/index'
 import { BASE_URL, TIME_OUT } from './request/config' //配置不同环境的baseurl
-
+import localCache from '@/utils/cache'
 // service 出口
 const mcRequest = new MCRequest({
   baseURL: BASE_URL,
   timeout: TIME_OUT,
   interceptor: {
     requestInterceptor: (config) => {
-      const token = 'master' //携带上token
+      // 取出缓存的token
+      const token = localCache.getCache('cms_token') //携带上token
       if (token) {
         ;(config.headers as any).Authorization = `Bearer ${token}`
       }

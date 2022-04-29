@@ -11,6 +11,7 @@ const app = createApp(App)
 
 app.use(store).use(registerApp).use(router).mount('#app')
 
+store.dispatch('login/loadStore') //初始化store数据
 console.log('[request instance]', mcRequest)
 
 // 确定请求返回的类型

@@ -10,6 +10,10 @@ import {
   ElInput,
   ElCheckbox,
   ElLink,
+  ElContainer,
+  ElAside,
+  ElHeader,
+  ElMain,
 } from 'element-plus'
 
 const components = [
@@ -23,6 +27,10 @@ const components = [
   ElInput,
   ElCheckbox,
   ElLink,
+  ElContainer,
+  ElAside,
+  ElHeader,
+  ElMain,
 ]
 
 export default function (app: App<Element>) {

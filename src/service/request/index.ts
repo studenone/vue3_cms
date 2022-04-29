@@ -1,7 +1,7 @@
 // 将请求的各种模式封装至类
 import axios from 'axios'
 import type { AxiosInstance } from 'axios'
-import { MCInterceptor, MCRequestConfig } from './types' // 导入自定义类型
+import type { MCInterceptor, MCRequestConfig } from './types' // 导入自定义类型
 import { ElLoading } from 'element-plus' // 导入loading组件
 import 'element-plus/es/components/loading/style/css'
 
