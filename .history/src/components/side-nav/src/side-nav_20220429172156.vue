@@ -1,0 +1,69 @@
+<template>
+  <div class="side-nav">
+    <el-container class="nav-content">
+      <el-header class="logo-container">
+        <div><img src="~@/assets/img/logo.svg" alt="logo" class="logo" /></div>
+        <div><span>Vue3+Ts</span></div>
+      </el-header>
+      <el-main>
+        <el-menu default-active="2" class="el-menu-vertical">
+          <template v-for="item in menus" :key="item.id">
+            <template v-if="item.type === 1">
+              <template v-for="subMenu in item.children" :key="subMenu.id">
+                <el-sub-menu>
+                  <template #title>
+                    <span>{{ item.name }}</span>
+                  </template>
+                </el-sub-menu>
+              </template>
+            </template>
+            <template v-else-if="item.type === 2">
+              <el-menu-item>
+                <span>{{ item.name }}</span>
+              </el-menu-item>
+            </template>
+          </template>
+        </el-menu>
+      </el-main>
+    </el-container>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent, computed } from 'vue'
+// import { useStore } from 'vuex' // vuex跟ts兼容性不好
+import { useStore } from '@/store/index'
+
+export default defineComponent({
+  components: {},
+  setup() {
+    const store = useStore()
+    const menus = computed(() => store.state.login.userMenu)
+    return {
+      menus,
+    }
+  },
+})
+</script>
+
+<style scoped lang="less">
+.side-nav {
+  width: 100%;
+  height: 100%;
+  .nav-content {
+    height: 100%;
+    .logo-container {
+      display: flex;
+      height: 48px;
+      padding: 12px 10px 8px 10px;
+      text-align: left;
+      color: #fff;
+      background-color: #001529;
+      .logo {
+        height: 100%;
+        margin: 0 15px;
+      }
+    }
+  }
+}
+</style>
