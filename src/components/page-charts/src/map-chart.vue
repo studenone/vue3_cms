@@ -6,7 +6,6 @@
 
 <script lang="ts" setup>
 import { defineProps, computed } from 'vue'
-import * as echarts from 'echarts'
 import { default as McEchart } from '@/base-ui/echart'
 import type { IPieData } from '../types'
 import { convertData } from '../utils/convertData'

@@ -1,1 +1,0 @@
-import { mcRequest } from '../../index'
